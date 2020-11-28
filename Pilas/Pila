@@ -1,0 +1,47 @@
+package Pilas ;
+
+import java.util.Scanner;
+
+    public class Pila {
+    Scanner leer=new Scanner(System.in);
+
+    int cima;
+    String pila [];
+
+    public Pila() {
+        cima=-1;
+        pila=new String[5];
+    }
+    public void insertar(String elemento){
+        
+       if(cima >=pila.length -1){
+        System.out.println("No puede insertar mas datos, la pila esta llena. ");
+        }
+        else{
+        pila[++cima]=elemento;
+        System.out.println("Se inserto el elemento");}
+    }
+    
+     public void eliminar(){
+      String elimina;
+        if(cima==-1){
+            System.out.println("Pila vacia");
+        }
+        else{
+        elimina=pila[cima];
+        cima--;
+         System.out.println("Se elimino el elemento");}
+    }
+     
+    public void mostrar(){
+        if(cima==-1){
+            System.out.println("Pila vacia");
+        }
+        else{
+        for (int i=cima; i>=0; i--){
+         System.out.println(pila[i]);
+        }
+        
+        }
+    }
+    }
